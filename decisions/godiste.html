@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GOdiste</title>
+	<script>
+	var odgovor = prompt('Kolilko imate godina');
+
+	odgovor = parseInt(odgovor);
+	if ( isNaN(odgovor) ) {
+		odgovor = prompt('Molim vas unesite broj godina! Retardu!'); 
+	}
+	odgovor = parseInt(odgovor);
+
+	if (odgovor < 30 ) {
+		alert('Vi ste mladi, sta radis veceras?')
+	} else if (odgovor >= 30 && odgovor < 60) {
+		alert('Vi ste sredovecni');
+	} else {
+		alert('Bako, bako!');
+	}
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

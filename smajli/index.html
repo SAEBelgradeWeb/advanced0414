@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Smajli</title>
+	<script>
+	var username; 
+
+	function hello(){
+	
+		if (username ) {
+			alert("Cao opet " + username);
+		} else {
+			username = prompt('Kako se zoves?');
+			alert("Cao " + username);
+
+		}
+
+	}
+
+	function nasmesiSe(){
+		document.getElementById('slika').src = "myFace_smile.png";
+		document.getElementById('pozdrav').innerHTML = "... ali sada kada si me kliknuo, ja sam se oraspolozio";
+	}
+
+	function smoriSe(){
+		document.getElementById('slika').src = "myFace.png";
+		document.getElementById('pozdrav').innerHTML = "opet sam se smorio";
+	}
+
+
+	</script>
+
+
+</head>
+<body>
+	
+	<a href="#" onclick="hello();">KLIKNI ME!</a>
+	<img src="myFace.png" id="slika" onclick="nasmesiSe();">
+	<h1 id="pozdrav">Cao, ja sam veoma ozbiljni smajli</h1>
+
+	<a href="#" onclick="smoriSe();">Smori me</a>
+
+</body>
+</html>
+
+
+
+
+
+
+

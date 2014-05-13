@@ -1,0 +1,11 @@
+.crveno {
+	background-color: red;
+	color: white;
+	font-size: 30px;
+	height: 40px;
+}
+
+#errem {
+	visibility: hidden;
+	color: red;
+}

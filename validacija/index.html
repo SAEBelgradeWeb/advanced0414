@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validacija</title>
+	<script>
+	function validiraj(){
+		var ime = document.getElementById('ime').value,
+			prezime = document.getElementById('prezime').value,
+			horor = document.getElementById('horor').checked;
+		var grad = document.getElementById('grad').value;
+		var komentar = document.getElementById('komentar').value;
+		var pol1 = document.getElementById('pol1').checked;
+		var pol2 = document.getElementById('pol2').checked;
+		var pol3 = document.getElementById('pol3').checked;
+		var godina = document.getElementById('godina').value;
+		var email = document.getElementById('email').value;
+
+		
+		if (email.indexOf('@') == "-1" || email.indexOf('.') == "-1") {
+			document.getElementById('errem').style.visibility = "visible";
+			document.getElementById('email').style.border = "1px solid red";
+		} else {
+			document.getElementById('errem').style.visibility = "hidden";
+			document.getElementById('email').style.border = "2px inset";
+		}
+
+		if (   isNaN(godina)   ) {
+			alert('morate da unesete broj!');
+		}
+
+		if (!pol1 && !pol2 && !pol3) {
+			//alert('nista nije cekirano, ti bespolno bice')
+		}
+
+		if (!horor) {
+			//alert('Znaci, hitovi Lepe Brene vam se ne svidjaju!?')
+		}
+
+		if (!ime) {
+			//document.getElementById('ime').style.border = "1px solid red";
+			//document.getElementById('ime').className = "crveno";
+		} else {
+			document.getElementById('ime').className = "";
+		}
+
+
+		if (!prezime) {
+			//alert('Druze, daj molim te upisi i prezime!');
+		}
+
+	}
+
+
+
+
+	window.onclose = function(){
+		alert('asdasd');
+	}
+
+	
+	</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onclick="pozdrav();">
+	
+<form action="">
+	<!-- tekstualna polja -->
+	<label for="ime">Ime:</label>
+		<input type="text" id="ime" placeholder="Unesite vase ime..."><br>
+	<label for="prezime">Prezime</label>
+		<input type="text" id="prezime"><br>
+	<label>Pol:</label>
+	Muski <input type="radio" name="pol" id="pol1">
+	Zenski <input type="radio" name="pol" id="pol2">
+	Zena sa bradom <input type="radio" name="pol" id="pol3">
+
+	<br>
+	<label>Koliko godina imate?</label>
+	<input type="text" id="godina">
+	<br>
+
+	<label>Vas email</label>
+	<input type="text" id="email"><span id="errem">Niste uneli ispravan email</span>
+	<br>
+
+
+
+	<label>Da li volite horor filmove?</label>
+	<input type="checkbox" id="horor">
+	<br>
+	<label>Iz kog ste grada?</label>
+	<select id="grad">
+		<option value="bg">Beograd</option>
+		<option value="ns">Novi Sad</option>
+		<option value="ni">Nis</option>
+	</select>
+	<br>
+	<label>Unesite komentar</label>
+	<textarea cols="50" rows="10" id="komentar"></textarea>
+	<input type="reset" value="Obrisi" >
+	<input type="submit" value="Posalji" >
+	<input type="button" value="Dugme" onclick="validiraj();">
+
+
+	<!-- HTML5 -->
+
+	<input type="url">
+
+
+</form>
+
+
+</body>
+</html>
