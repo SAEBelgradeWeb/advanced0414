@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nizovi</title>
+<script>
+var brojevi = new Array("ford", 4, true);
+	var juznoVoce = ['banana', 'mango', 'kivi'];
+	var voce = new Array('jabuka', 'sljiva', 'kruska', juznoVoce);
+	
+
+	console.log(juznoVoce)
+	juznoVoce.push('papaja', 'limun');
+	console.log( juznoVoce   );
+	juznoVoce.pop();
+	console.log( juznoVoce   );
+	juznoVoce.unshift('ananas');
+	console.log( juznoVoce   );
+	juznoVoce.shift();
+	console.log( juznoVoce   );
+
+	var novoJuznoVoce = new Array('banana', 'mango', 'kivi', 'papaja', 'limun', 'ananas');
+	
+	novoJuznoVoce.splice(2, 2, "jabuka", 'sljiva');
+
+	console.log( novoJuznoVoce   );
+	
+</script>
+</head>
+<body>
+	
+</body>
+</html>

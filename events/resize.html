@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resize</title>
+
+	<style>
+	#crveni {
+		width: 500px;
+		height: 500px;
+		background-color: green;
+	}
+
+	</style>
+	<script>
+	// function resize(§){
+	// 	var sirina = window.innerWidth;
+	// 	var visina = window.innerHeight;
+	// 	document.getElementById('mere').innerHTML = "Sirina: " + sirina + "<br>" + "Visina: " + visina;
+		
+	var brojac = 1;
+	// }
+	function kadasesveucita(){
+		// setTimeout("promeniuplavo()", 1001);
+
+		// setTimeout(function(){
+		// 	document.getElementById('crveni').style.backgroundColor = "yellow"
+		// }, 1000);
+
+		setInterval(function(){
+			if (brojac == 1) {
+				promeniubelo();
+			} else if (brojac == 2) {
+				promeniucrveno()
+			} else if (brojac == 3) {
+				promeniuplavo();
+			}
+		}, 500)
+
+		document.getElementById('crveni').style.backgroundColor = "red";
+	}
+
+	function promeniuplavo(){
+		document.getElementById('crveni').style.backgroundColor = "blue";
+		brojac = 1;
+	}
+
+	function promeniubelo(){
+		document.getElementById('crveni').style.backgroundColor = "white";
+		brojac = 2;
+	}
+
+	function promeniucrveno(){
+		document.getElementById('crveni').style.backgroundColor = "red";
+		brojac = 3;
+	}
+	</script>
+</head>
+<body onresize="resize();" onload="kadasesveucita();">
+	
+	<div id="mere"></div>
+	<input type="button" onclick="promeniuplavo();" value="Promeni">
+	<div id="crveni"></div>
+</body>
+</html>
