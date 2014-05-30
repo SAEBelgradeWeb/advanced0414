@@ -1,0 +1,22 @@
+.crvenko {
+	background-color: red;
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 5px;
+}
+
+
+.medenko {
+	background-color: yellow;
+	font-size: 50px;
+}
+
+
+.zeleno {
+	background-color: green;
+	width: 200px;
+}
+#drugi {
+	/*display: none;*/
+}
