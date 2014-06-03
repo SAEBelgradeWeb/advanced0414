@@ -9,3 +9,6 @@
 	visibility: hidden;
 	color: red;
 }
+ul > li:nth-last-child(2) {
+	color: red;
+}
