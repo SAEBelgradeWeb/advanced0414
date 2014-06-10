@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Events</title>
+	<style>
+	#divko {
+		width: 100px;
+		height: 100px;
+		background-color: black;
+
+
+	}
+
+	#divko:hover {
+		cursor: pointer;
+	}
+
+
+	.crveno {
+		background-color: red !important;
+	}
+
+	</style>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+<script>
+
+$(document).ready(function(){
+
+	$('#divko').on('click', function(){
+		$(this).addClass('crveno');
+	});
+
+});
+</script>
+</head>
+
+<body>
+	
+<div id="divko"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+dl {
+	width: 500px;
+	margin: 0 auto;
+}
+
+dt {
+	text-align: center;
+	padding: 20px;
+	background-color: #e7e7e7;
+	font-weight: bold;
+	border-bottom: 1px solid #828282;
+	border-top: 1px solid white;
+}
+
+dd {
+	margin: 0;
+	padding: 20px;
+	background-color: #f7f7f7;
+	display: none;
+}
+
+dt:first-child{
+	border-top: none;
+}
+
+dt:last-of-type{
+	border-bottom: none;
+}

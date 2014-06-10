@@ -8,7 +8,7 @@
 	.divko {
 		width: 100px;
 		height: 100px;
-		/*background-color: red;*/
+		background-color: red;
 	}
 
 	li {
@@ -22,13 +22,83 @@
 	.crvena {
 		color: red;
 	}
+	.forma,
+	.galerija{
+		outline: 1px solid red;
+		display: none;
+		width: 500px;
+	}
+	
+	.forma label{
+		display: block;
+		width: 40%;
+		float: left;
+		padding-right: 5%;
+	}
+	.forma input{
+		width: 40%;
+		background-color: red;
+	}
+
+	.forma input[name="submit"]{
+		width: 10%;
+		background-color: inherit;
+	}
+	.sidebar{
+		width: 150px;
+		float: left;
+	}
+	.sidebar img{
+		width: 100%;
+	}
+	.large{
+		width: 250px;
+		float: right;
+		display: none;
+	}
 
 	</style>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/novi.js"></script>
 </head>
 <body>
-	<div class="divko">
+	<div class="forma">
+		<form action="obradi_podatke.php" method="">
+			<p>
+				<label for="username">Korisnicko ime</label>
+				<input type="text" name="username" id="username">
+			</p>
+			<p>
+				<label for="password">Sifra</label>
+				<input type="password" name="password" id="password">
+			</p>
+			<p>
+				<input type="submit" name="submit" value="Uloguj se">
+			</p>
+		</form>
+	</div>
+	<p id="prikaz_forme">Prikazi formu</p>
+
+	<div class="galerija">
+		<div class="sidebar">
+			<img src="http://upload.wikimedia.org/wikipedia/commons/e/e0/Micko%2BLarkin.jpg" alt="">
+			<img src="http://www.pulsonline.rs/data/images/2011-02-12/5490_micko_ahl.jpg?ver=1357989167" alt="">
+			<img src="http://www.svet.rs/wp-content/uploads/2011/04/MICKO01.jpg" alt="">
+			<img src="http://www.theorchestrapit.com/files/images/2009-10-30_sc_micko1.preview.jpg" alt="">
+		</div>
+		<img class="large" src="" alt="">
+	</div>
+	<p id="prikaz_galerije">Prikazi galeriju</p>
+	<!-- <input type="submit" value="prikazi formu"> -->
+
+	<!-- <ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul> -->
+	<!--<div class="divko">
 		<ul>
 			<li>Home</li>
 			<li class=""><ul>
@@ -53,5 +123,6 @@
 		</ul>
 
 	</div>
+	<p style="display: none;">slajduje</p>-->
 </body>
 </html>
