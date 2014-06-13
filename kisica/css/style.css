@@ -1,0 +1,14 @@
+.kap {
+	background-image: url('../img/kap.png');
+	background-size: cover;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: -30px;
+
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
